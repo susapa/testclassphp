@@ -1,4 +1,6 @@
 <?php
+$checkError = ini_get('error_reporting');
+error_reporting($checkError  ^ E_NOTICE);
 class test 
 {   
     protected $firstname = susapa  ;
