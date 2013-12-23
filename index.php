@@ -42,7 +42,7 @@ class BaseClass
 
     public function myMethod() 
              {
-                  echo "BaseClass method called";
+                  echo "BaseClass method called<br>";
              }
 
 }
@@ -50,14 +50,17 @@ class DerivedClass extends BaseClass
 {
     public function myMethod() 
             {
-                   echo "DerivedClass method called";
+                   echo "DerivedClass method called<br>";
             } 
 }
    function processClass(BaseClass $c)
             {
                    $c->myMethod();
             }
-   
+    $d = new BaseClass();
+    $d->myMethod();
+   $c = new DerivedClass();
+   processClass($c);
    
 $a = new Customer();
 
