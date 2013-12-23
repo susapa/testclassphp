@@ -74,4 +74,5 @@ $b = new ResultVat();
 $b->testvat();
 echo '<br>';
 echo 'Value Vat Is' . $b->vat;
+echo 'testCheckin';
 ?>
