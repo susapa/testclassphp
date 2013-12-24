@@ -18,5 +18,5 @@ foreach ($b as $key=>$val)
 {
     echo "Key = ".$key."Value = ".$val.'<br>';
 }
-tttttttttttttttt
+
 ?>
