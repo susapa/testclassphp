@@ -1,34 +1,43 @@
 <?php
-abstract  class AbstractClass
+abstract class AbstractClass
 {
-    abstract protected function  getValue();
-    abstract protected function  prefixValue();
-    
-    public function  printOut(){
-        echo $this->getValue()."\n";
+    // Force Extending class to define this method
+    abstract protected function getValue();
+    abstract protected function prefixValue($prefix);
+
+    // Common method
+    public function printOut() {
+        print $this->getValue() . "\n";
     }
 }
+
 class ConcreteClass1 extends AbstractClass
 {
     protected function getValue() {
         return "ConcreteClass1";
     }
 
-    protected function prefixValue($prefix) {
+    public function prefixValue($prefix) {
         return "{$prefix}ConcreteClass1";
-    }    
+    }
 }
+
 class ConcreteClass2 extends AbstractClass
 {
-    protected function getValue() {
-           return "ConcreteClass2";
+    public function getValue() {
+        return "ConcreteClass2";
     }
 
-    protected function prefixValue($prefix) {
+    public function prefixValue($prefix) {
         return "{$prefix}ConcreteClass2";
-    }    
+    }
 }
-$cass1 = new ConcreteClass1();
-$cass1->printOut();
-//echo $class1->prefixValue('FOO_')."\n";
+
+$class1 = new ConcreteClass1;
+$class1->printOut();
+echo $class1->prefixValue('FOO_') ."\n";
+
+$class2 = new ConcreteClass2;
+$class2->printOut();
+echo $class2->prefixValue('FOO_') ."\n";
 ?>
