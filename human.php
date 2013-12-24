@@ -19,6 +19,18 @@
         echo 'Height : ' . $somsak->showHeight() . '';
         echo 'Weight : ' . $somsak->showWeight() . '';
         echo 'Age : ' . $somsak->showAge() . '';
+        echo '--------------------------------------<br>';
+        $kanjana = new human();
+        $kanjana->name ='Kanjana';
+        $kanjana->sex = 2;
+        $kanjana->height = 158;
+        $kanjana->weight = 65;
+        $kanjana->age = 28;
+        echo 'Name : ' . $kanjana->showName() . '';
+        echo 'Sex : ' . $kanjana->showSex() . '';
+        echo 'Height : ' . $kanjana->showHeight() . '';
+        echo 'Weight : ' . $kanjana->showWeight() . '';
+        echo 'Age : ' . $kanjana->showAge() . '';
         echo '--------------------------------------';
         ?>
     </body>
