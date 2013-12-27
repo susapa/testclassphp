@@ -5,12 +5,13 @@
     </head> 
     <?php
     include("/humanclass.php");
+    include("/connectDB_1.php");
     ?>
     <body>
         <?php
         $somsak = new human();
         $somsak->name = 'Somsak';
-        $somsak->sex = '1';
+        $somsak->sex = '2';
         $somsak->height = '1';
         $somsak->weight = 65;
         $somsak->age = 28;
@@ -20,7 +21,9 @@
         echo 'Weight : ' . $somsak->showWeight() . '';
         echo 'Age : ' . $somsak->showAge() . '';
         echo '--------------------------------------<br>';
-        $kanjana = new human();
+        echo ($somsak->showprovice()).'<br>';
+         echo '--------------------------------------<br>';
+        $kanjana = new women();
         $kanjana->name ='Kanjana';
         $kanjana->sex = 2;
         $kanjana->height = 158;
@@ -31,7 +34,20 @@
         echo 'Height : ' . $kanjana->showHeight() . '';
         echo 'Weight : ' . $kanjana->showWeight() . '';
         echo 'Age : ' . $kanjana->showAge() . '';
+        echo '--------------------------------------<br>';
+        $men = new men();
+        $men->name ='men2';
+        $men->sex = 2;
+        $men->height = 200;
+        $men->weight = 65;
+        $men->age = 28;
+        echo 'Name : ' . $men->showName() . '';
+        echo 'Sex : ' . $men->showSex() . '';
+        echo 'Height : ' . $men->showHeight() . '';
+        echo 'Weight : ' . $men->showWeight() . '';
+        echo 'Age : ' . $men->showAge() . '';
         echo '--------------------------------------';
         ?>
+        
     </body>
 </html>
